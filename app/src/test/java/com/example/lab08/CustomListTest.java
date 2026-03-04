@@ -26,6 +26,19 @@ public class CustomListTest {
 
         assertFalse(list.hasCity(edmonton));
     }
+    @Test
+    public void testCountCities() {
+        CustomList list = new CustomList();
+
+        // An empty list should have a count of 0
+        assertEquals(0, list.countCities());
+
+        City toronto = new City("Toronto", "ON");
+        list.addCity(toronto);
+
+
+        assertEquals(1, list.countCities());
+    }
 
 }
 
